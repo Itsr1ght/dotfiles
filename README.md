@@ -7,7 +7,14 @@ Need to Install
 
     $ pacman -S git neovim kitty zsh
 
-Need to Install font
+Need to Install yay using
+
+    $ cd $HOME
+    $ git clone https://aur.archlinux.org/yay.git
+    $ cd yay
+    $ makepkg -si
+
+Install Font using yay 
 
     $ yay -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd cozette-ttf
 
