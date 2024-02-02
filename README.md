@@ -16,7 +16,7 @@ Need to Install yay using
 
 Install Font using yay 
 
-    $ yay -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd cozette-ttf
+    $ yay -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
 config the zsh using <a href="https://github.com/romkatv/zsh4humans">zsh4humans</a>
 
