@@ -5,7 +5,7 @@
 
 Need to Install
 
-    $ pacman -S git neovim kitty zsh
+    $ pacman -S git git-lfs neovim kitty zsh
 
 Need to Install yay using
 
