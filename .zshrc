@@ -108,3 +108,8 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export ANDROID_HOME=~/Android/Sdk/
+export ANDROID_NDK_HOME=~/Android/Sdk/ndk/26.2.11394342
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/DEVKITPPC
