@@ -113,3 +113,10 @@ export ANDROID_NDK_HOME=~/Android/Sdk/ndk/26.2.11394342
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 export DEVKITPPC=/opt/devkitpro/DEVKITPPC
+
+# bun completions
+[ -s "/home/r1ght/.bun/_bun" ] && source "/home/r1ght/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
