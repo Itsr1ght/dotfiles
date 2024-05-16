@@ -7,6 +7,12 @@ Need to Install
 
     $ pacman -S git git-lfs neovim kitty zsh
 
+
+bspwm dependencies
+
+    $ pacman -S bspwm rofi
+
+
 Need to Install yay using
 
     $ cd $HOME
