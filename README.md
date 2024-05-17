@@ -10,7 +10,7 @@ Need to Install
 
 bspwm dependencies
 
-    $ pacman -S bspwm sxhkd rofi
+    $ pacman -S bspwm sxhkd polybar picom dmenu dunst thunar nitrogen rofi
 
 
 Need to Install yay using
