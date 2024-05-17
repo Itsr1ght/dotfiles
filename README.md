@@ -10,7 +10,7 @@ Need to Install
 
 bspwm dependencies
 
-    $ pacman -S bspwm rofi
+    $ pacman -S bspwm sxhkd rofi
 
 
 Need to Install yay using
