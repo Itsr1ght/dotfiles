@@ -40,6 +40,6 @@ Install the stow using pacman
 
 Symlink using the stow
 
-    $ stow .
+    $ stow -vt ~ -S .
 
 
