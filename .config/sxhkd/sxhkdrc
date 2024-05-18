@@ -8,8 +8,8 @@ super + Return
 
 
 # program launcher
-super + shift + @space
-	dmenu_run	
+super + @space
+	 LANG=en_US.UTF-8 rofi -show drun 	
 
 
 # make sxhkd reload its configuration files:
