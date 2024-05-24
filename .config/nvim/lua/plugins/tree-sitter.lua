@@ -24,6 +24,7 @@ return {
         "cmake",
         "c",
         "cpp",
+        "v",
       },
     },
   },

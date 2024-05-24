@@ -15,6 +15,7 @@ return {
           },
         },
         jdtls = {},
+        v_analyser = {},
         neocmake = {},
         jsonls = {
           on_new_config = function(new_config)
