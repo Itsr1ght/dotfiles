@@ -22,6 +22,11 @@ nitrogen --restore &
 dunst &
 nm-applet &
 
+#for disable screen turn off
+
+xset -dpms &
+xset s off &
+
 #AutoStart User Application
 
 skypeforlinux &
