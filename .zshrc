@@ -129,6 +129,7 @@ export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
 # alias for git commands
 alias g="git"
+alias ga="git add"
 alias gc="git commit"
 alias gcm="git commit -m"
 alias gs="git status"
@@ -143,3 +144,8 @@ alias zbr="zig build run"
 
 alias j="just"
 alias jl="just -l"
+
+#alias for listing files
+
+alias l="exa"
+alias la="exa -a"
