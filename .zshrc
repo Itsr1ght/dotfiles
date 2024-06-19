@@ -128,9 +128,11 @@ export LC_ALL=en_US.UTF-8
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
 # alias for git commands
-alias gc="git commit"
 alias g="git"
-
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gs="git status"
+alias gp="git pull"
 
 # alias for zig
 alias z="zig"
