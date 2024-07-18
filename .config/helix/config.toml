@@ -1,7 +1,8 @@
 theme = "onedark"
 
 [editor]
-line-number = "relative"
+line-number = "absolute"
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -24,3 +25,18 @@ mode.select = "SELECT"
 enable = true
 display-messages = true
 display-inlay-hints = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
