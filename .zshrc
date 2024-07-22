@@ -152,3 +152,6 @@ alias jl="just -l"
 
 alias l="exa"
 alias la="exa -a"
+
+# alias for helix
+alias hx="helix"
