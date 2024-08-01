@@ -117,6 +117,9 @@ export DEVKITPPC=/opt/devkitpro/DEVKITPPC
 # bun completions
 [ -s "/home/r1ght/.bun/_bun" ] && source "/home/r1ght/.bun/_bun"
 
+# load some function
+source ~/.tools/tools.sh
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -155,3 +158,6 @@ alias la="exa -a"
 
 # alias for helix
 alias hx="helix"
+[[ ! $PATH == */home/r1ght/.fex/bin* ]] && export PATH="/home/r1ght/.fex/bin:$PATH"
+[ -f /home/r1ght/.fex/.fex.zsh ] && source /home/r1ght/.fex/.fex.zsh
+bindkey '^f' fex-widget
