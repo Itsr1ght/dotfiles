@@ -134,12 +134,18 @@ export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 alias g="git"
 alias ga="git add"
 alias gc="git commit"
+alias gcl="git clone"
 alias gcm="git commit -m"
 alias gch="git checkout"
 alias gchb="git checkout -b"
 alias gs="git status"
 alias gp="git push"
 alias gpl="git pull"
+alias gd="git diff"
+
+function gclr(){
+  gcl $1 --recursive
+}
 
 # alias for zig
 alias z="zig"
@@ -161,3 +167,6 @@ alias hx="helix"
 [[ ! $PATH == */home/r1ght/.fex/bin* ]] && export PATH="/home/r1ght/.fex/bin:$PATH"
 [ -f /home/r1ght/.fex/.fex.zsh ] && source /home/r1ght/.fex/.fex.zsh
 bindkey '^f' fex-widget
+
+ANDROID_TOOLS="/home/r1ght/Android/Sdk/tools/bin"
+export PATH=$PATH:$ANDROID_TOOLS
