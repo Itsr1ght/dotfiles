@@ -170,3 +170,10 @@ bindkey '^f' fex-widget
 
 ANDROID_TOOLS="/home/r1ght/Android/Sdk/tools/bin"
 export PATH=$PATH:$ANDROID_TOOLS
+
+#ZVM
+
+ZVM=$HOME/.zvm/
+export PATH=$PATH:$ZVM/bin
+export PATH=$PATH:$ZVM/self
+export FEX_DEFAULT_COMMAND="fex --time-type changed"
