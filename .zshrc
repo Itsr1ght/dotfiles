@@ -176,4 +176,13 @@ export PATH=$PATH:$ANDROID_TOOLS
 ZVM=$HOME/.zvm/
 export PATH=$PATH:$ZVM/bin
 export PATH=$PATH:$ZVM/self
-export FEX_DEFAULT_COMMAND="fex --time-type changed"
+
+#Firefox profile
+
+function open_firefox(){
+  if [ -n "$1" ]; then
+    firefox -P "$1" &
+  else:
+    print "Enter profile name"
+  fi
+}
