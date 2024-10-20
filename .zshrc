@@ -159,8 +159,7 @@ alias jl="just -l"
 
 #alias for listing files
 
-alias l="exa"
-alias la="exa -a"
+alias l="exa -a"
 
 # alias for helix
 alias hx="helix"
@@ -186,3 +185,5 @@ function open_firefox(){
     print "Enter profile name"
   fi
 }
+
+export PATH=$PATH:$HOME/.emacs.d/bin
