@@ -186,4 +186,4 @@ function open_firefox(){
   fi
 }
 
-export PATH=$PATH:$HOME/.emacs.d/bin
+export PATH=$PATH:$HOME/.config/emacs/bin/
