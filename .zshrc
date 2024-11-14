@@ -186,4 +186,9 @@ function open_firefox(){
   fi
 }
 
+#DoomEmacs binaries
 export PATH=$PATH:$HOME/.config/emacs/bin/
+#DEVKITPRO tools
+export PATH=$PATH:/opt/devkitpro/tools/bin/
+#DEVKITPRO binaries
+export PATH=$PATH:/opt/devkitpro/devkitA64/bin/
