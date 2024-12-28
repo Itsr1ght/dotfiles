@@ -108,7 +108,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export ANDROID_HOME=~/Android/Sdk/
-export ANDROID_NDK_HOME=~/Android/Sdk/ndk/26.2.11394342
+export ANDROID_NDK_HOME=~/Android/Sdk/ndk/26.1.10909125/
 
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
@@ -163,12 +163,10 @@ alias l="exa -a"
 
 # alias for helix
 alias hx="helix"
-[[ ! $PATH == */home/r1ght/.fex/bin* ]] && export PATH="/home/r1ght/.fex/bin:$PATH"
-[ -f /home/r1ght/.fex/.fex.zsh ] && source /home/r1ght/.fex/.fex.zsh
-bindkey '^f' fex-widget
 
 ANDROID_TOOLS="/home/r1ght/Android/Sdk/tools/bin"
 export PATH=$PATH:$ANDROID_TOOLS
+export PATH=$PATH:$ANDROID_TOOLS/..
 
 #ZVM
 
