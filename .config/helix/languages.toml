@@ -16,7 +16,7 @@ indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "zig"
-auto-format = false
+auto-format = true
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
@@ -41,6 +41,10 @@ indent = { tab-width = 4, unit = "    " }
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"
+
+
+[language-server.zls]
+command = "zls"
 
 [language-server.rust-analyzer.config]
 inlayHints.bindingModeHints.enable = false
