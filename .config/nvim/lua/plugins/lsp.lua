@@ -98,7 +98,7 @@ return {
         require('mason').setup({})
         require('mason-lspconfig').setup({
             ensure_installed = {
-                "lua-language-server",
+                "lua_ls",
                 "intelephense",
                 "ts_ls",
                 "eslint",
@@ -115,7 +115,7 @@ return {
                             Lua = {
                                 runtime = {
                                     version = 'LuaJIT',
-				    path = vim.split(package.path, ";"),
+                                    path = vim.split(package.path, ";"),
                                 },
                                 diagnostics = {
                                     globals = { 'vim' },
