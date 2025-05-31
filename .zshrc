@@ -168,13 +168,13 @@ ANDROID_TOOLS="/home/r1ght/Android/Sdk/tools/bin"
 export PATH=$PATH:$ANDROID_TOOLS
 export PATH=$PATH:$ANDROID_TOOLS/..
 
-#ZVM
+# ZVM
 
 ZVM=$HOME/.zvm/
 export PATH=$PATH:$ZVM/bin
 export PATH=$PATH:$ZVM/self
 
-#Firefox profile
+# Firefox profile
 
 function open_firefox(){
   if [ -n "$1" ]; then
@@ -184,9 +184,12 @@ function open_firefox(){
   fi
 }
 
-#DoomEmacs binaries
+# DoomEmacs binaries
 export PATH=$PATH:$HOME/.config/emacs/bin/
-#DEVKITPRO tools
+# DEVKITPRO tools
 export PATH=$PATH:/opt/devkitpro/tools/bin/
-#DEVKITPRO binaries
+# DEVKITPRO binaries
 export PATH=$PATH:/opt/devkitpro/devkitA64/bin/
+
+# adding jvm to PATH cuz command not working
+export PATH="/usr/lib/jvm/default/bin/:$PATH"
