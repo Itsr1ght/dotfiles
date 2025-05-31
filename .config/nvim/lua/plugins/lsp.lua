@@ -129,6 +129,20 @@ return {
                         },
                     })
                 end,
+                java_language_server = function()
+                    require('lspconfig').java_language_server.setup({
+                        root_dir = require('lspconfig').util.root_pattern('.git', 'build.gradle', 'pom.xml'),
+                    })
+                end,
+                kotlin_language_server = function()
+                    require('lspconfig').kotlin_language_server.setup({
+                        root_dir = require('lspconfig').util.root_pattern(
+                            'settings.gradle.kts',
+                            'build.gradle.kts',
+                            '.git'
+                        ),
+                    })
+                end
             },
         })
 
