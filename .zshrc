@@ -117,9 +117,6 @@ export DEVKITPPC=/opt/devkitpro/DEVKITPPC
 # bun completions
 [ -s "/home/r1ght/.bun/_bun" ] && source "/home/r1ght/.bun/_bun"
 
-# load some function
-source ~/.tools/tools.sh
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -127,8 +124,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export LC_ALL=C
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
 # alias for git commands
 alias g="git"
