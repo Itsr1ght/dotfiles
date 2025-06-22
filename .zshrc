@@ -138,6 +138,8 @@ alias gp="git push"
 alias gpl="git pull"
 alias gd="git diff"
 
+source ~/.tools/gitcommands.sh
+
 function gclr(){
   gcl $1 --recursive
 }
