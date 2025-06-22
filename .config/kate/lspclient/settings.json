@@ -1,0 +1,9 @@
+{
+    "servers" : {
+	"odin" : {
+	    "command" : "ols",
+	    "url": "https://github.com/DanielGavin/ols",
+	    "highlightingModeRegex": "^Odin$"
+	}
+    }
+}
