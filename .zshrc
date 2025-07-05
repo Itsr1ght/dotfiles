@@ -145,9 +145,14 @@ function gclr(){
 }
 
 # alias for zig
+
 alias z="zig"
 alias zb="zig build"
 alias zbr="zig build run"
+
+# alias for cargo
+alias cb="cargo build"
+alias cr="cargo run"
 
 #alias for justfile
 
