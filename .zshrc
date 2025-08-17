@@ -121,7 +121,6 @@ export DEVKITPPC=/opt/devkitpro/DEVKITPPC
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export LC_ALL=C
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
