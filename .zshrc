@@ -169,12 +169,6 @@ ANDROID_TOOLS="/home/r1ght/Android/Sdk/tools/bin"
 export PATH=$PATH:$ANDROID_TOOLS
 export PATH=$PATH:$ANDROID_TOOLS/..
 
-# ZVM
-
-ZVM=$HOME/.zvm/
-export PATH=$PATH:$ZVM/bin
-export PATH=$PATH:$ZVM/self
-
 # Firefox profile
 
 function open_firefox(){
