@@ -102,6 +102,8 @@ alias ls="${aliases[ls]:-ls} -A"
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
+export EDITOR="vim"
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -168,16 +170,6 @@ alias hx="helix"
 ANDROID_TOOLS="/home/r1ght/Android/Sdk/tools/bin"
 export PATH=$PATH:$ANDROID_TOOLS
 export PATH=$PATH:$ANDROID_TOOLS/..
-
-# Firefox profile
-
-function open_firefox(){
-  if [ -n "$1" ]; then
-    firefox -P "$1" &
-  else:
-    print "Enter profile name"
-  fi
-}
 
 # DoomEmacs binaries
 export PATH=$PATH:$HOME/.config/emacs/bin/
