@@ -102,6 +102,7 @@ alias ls="${aliases[ls]:-ls} -A"
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
+export TERM=xterm-256color
 export EDITOR="vim"
 
 export PYENV_ROOT="$HOME/.pyenv"
