@@ -181,3 +181,6 @@ export PATH=$PATH:/opt/devkitpro/devkitA64/bin/
 
 # adding jvm to PATH cuz command not working
 export PATH="/usr/lib/jvm/default/bin/:$PATH"
+
+# adding nimble to PATH
+export PATH="/home/r1ght/.nimble/bin:$PATH"
