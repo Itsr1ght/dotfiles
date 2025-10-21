@@ -1,4 +1,4 @@
-vim.lsp.enable({'lua_ls', 'zls'})
+vim.lsp.enable({'lua_ls', 'zls', 'asm_lsp', 'nim_lsp'})
 
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(ev)
