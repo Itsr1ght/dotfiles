@@ -1,5 +1,5 @@
 local lsp = {
-    'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pylsp'
+    'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pylsp', "tsserver"
 }
 
 vim.lsp.enable(lsp)
@@ -26,3 +26,4 @@ vim.diagnostic.config({
         current_line = true,
     }
 })
+
