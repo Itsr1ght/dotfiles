@@ -1,9 +1,9 @@
-local lsp = {
-    'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pylsp', "tsserver"
-}
-
 vim.pack.add{
   { src = 'https://github.com/neovim/nvim-lspconfig' },
+}
+
+local lsp = {
+    'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pylsp', "tsserver"
 }
 vim.lsp.enable(lsp)
 

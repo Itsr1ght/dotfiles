@@ -1,5 +1,11 @@
 vim.pack.add(
-    {"https://github.com/AlexvZyl/nordic.nvim"}
+    {
+        -- Nordic
+        "https://github.com/AlexvZyl/nordic.nvim",
+        -- OneDark
+        "https://github.com/navarasu/onedark.nvim"
+    }
 )
 
-require('nordic').load()
+-- require('nordic').load()
+require('onedark').load()
