@@ -2,6 +2,9 @@ local lsp = {
     'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pylsp', "tsserver"
 }
 
+vim.pack.add{
+  { src = 'https://github.com/neovim/nvim-lspconfig' },
+}
 vim.lsp.enable(lsp)
 
 vim.api.nvim_create_autocmd('LspAttach', {

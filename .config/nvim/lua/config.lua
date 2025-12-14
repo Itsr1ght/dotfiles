@@ -12,3 +12,4 @@ vim.o.clipboard = 'unnamedplus'
 
 -- importing the LSP configuration file from config folder
 require('config.lsp')
+require('config.treesitter')
