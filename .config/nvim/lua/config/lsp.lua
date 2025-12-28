@@ -3,7 +3,7 @@ vim.pack.add{
 }
 
 local lsp = {
-    'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pylsp', "tsserver"
+    'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pylsp', "tsserver", "c3_lsp"
 }
 vim.lsp.enable(lsp)
 
