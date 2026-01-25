@@ -1,10 +1,12 @@
-vim.pack.add{
-  { src = 'https://github.com/neovim/nvim-lspconfig' },
+vim.pack.add {
+    { src = 'https://github.com/neovim/nvim-lspconfig' },
+    { src = "https://github.com/Saghen/blink.cmp" },
 }
 
 local lsp = {
-    'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pylsp', "tsserver", "c3_lsp"
+    'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pyright', "tsserver", "c3_lsp"
 }
+
 vim.lsp.enable(lsp)
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -15,10 +17,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 vim.opt.completeopt = {
                     'menu', 'menuone', 'noinsert', 'fuzzy', 'popup'
                 }
-                vim.lsp.completion.enable(true, client.id, ev.buf, {autotrigger = true})
-                vim.keymap.set('i', '<C-Space>', function()
-                   vim.lsp.completion.get()
-                end)
+                vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
             end
         end
     end
@@ -29,4 +28,26 @@ vim.diagnostic.config({
         current_line = true,
     }
 })
+
+-- autocomplete stuff
+
+require('blink-cmp').setup({
+    fuzzy = { implementation = 'prefer_rust' },
+    completion = {
+        accept = {
+            auto_brackets = { enabled = true },
+        },
+        list = {
+            selection = { preselet = true, auto_insert = true },
+        },
+        documentation = {auto_show = true, auto_show_delay_ms = 500},
+        ghost_text = { enabled = true, show_with_menu = true },
+    }
+})
+
+
+-- lsp bindings
+
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+
 
