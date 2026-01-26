@@ -22,6 +22,7 @@ vim.diagnostic.config({
 local blink = require("blink.cmp")
 blink.setup({
     fuzzy = { implementation = 'prefer_rust' },
+    signature = {enabled = false},
     completion = {
         accept = {
             auto_brackets = { enabled = true },
@@ -47,10 +48,13 @@ require("fidget").setup({
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', "<leader>h", vim.lsp.buf.hover)
-vim.keymap.set("i", "<CR>", function()
-    if blink.is_visible() then
-        blink.accept()
-    else
-        return "<CR>"
-    end
-end, {expr = true})
+
+-- for ADA file fix
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "ada",
+    callback = function()
+        vim.keymap.del("i", "<Space>aj", { buffer = true })
+        vim.keymap.del("i", "<Space>al", { buffer = true })
+    end,
+})
+
