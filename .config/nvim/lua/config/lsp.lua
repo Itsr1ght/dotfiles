@@ -10,29 +10,17 @@ local lsp = {
 
 vim.lsp.enable(lsp)
 
-vim.api.nvim_create_autocmd('LspAttach', {
-    callback = function(ev)
-        local client = vim.lsp.get_client_by_id(ev.data.client_id)
-        if client then
-            if client:supports_method('textDocument/completion') then
-                vim.opt.completeopt = {
-                    'menu', 'menuone', 'noinsert', 'fuzzy', 'popup'
-                }
-                vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-            end
-        end
-    end
-})
-
 vim.diagnostic.config({
     virtual_lines = {
         current_line = true,
     }
 })
 
+
 -- autocomplete stuff
 
-require('blink-cmp').setup({
+local blink = require("blink.cmp")
+blink.setup({
     fuzzy = { implementation = 'prefer_rust' },
     completion = {
         accept = {
@@ -59,3 +47,10 @@ require("fidget").setup({
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', "<leader>h", vim.lsp.buf.hover)
+vim.keymap.set("i", "<CR>", function()
+    if blink.is_visible() then
+        blink.accept()
+    else
+        return "<CR>"
+    end
+end, {expr = true})
