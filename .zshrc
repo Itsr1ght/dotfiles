@@ -168,7 +168,7 @@ alias jl="just -l"
 
 #alias for listing files
 
-alias l="exa -a"
+alias ls="exa -a --icons=auto"
 
 # alias for helix
 alias hx="helix"
