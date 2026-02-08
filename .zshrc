@@ -189,3 +189,7 @@ export PATH="/usr/lib/jvm/default/bin/:$PATH"
 
 # adding nimble to PATH
 export PATH="/home/r1ght/.nimble/bin:$PATH"
+
+# direnv hook
+eval "$(direnv hook zsh)"
+
