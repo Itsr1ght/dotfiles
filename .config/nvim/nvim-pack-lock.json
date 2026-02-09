@@ -20,6 +20,10 @@
       "rev": "b8ddeb8fb978f782affa22d993b2b6baef4bc0a5",
       "src": "https://github.com/A7Lavinraj/fyler.nvim"
     },
+    "live-server.nvim": {
+      "rev": "d6a253569ebb813c622f56971f55f56d044f6ab5",
+      "src": "https://github.com/selimacerbas/live-server.nvim"
+    },
     "lsp-progress.nvim": {
       "rev": "ae52979ad412371ea6dc39ff70c8dfc681fb42b8",
       "src": "https://github.com/linrongbin16/lsp-progress.nvim"
@@ -27,6 +31,10 @@
     "lualine.nvim": {
       "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "markdown-preview.nvim": {
+      "rev": "a3ad2b3883a273890eb8901563f4cc6a0becf58b",
+      "src": "https://github.com/selimacerbas/markdown-preview.nvim"
     },
     "mason.nvim": {
       "rev": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800",
