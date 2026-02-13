@@ -1,6 +1,3 @@
--- keymap for explorer as 'cd'
-vim.keymap.set('n', '<leader>cd', function() vim.cmd('e .') end)
-
 -- keymap for copy and paste to clipboard
 vim.keymap.set({ 'n', 'v' }, 'y', '"+y')
 vim.keymap.set({ 'n', 'v' }, 'p', '"+p')
