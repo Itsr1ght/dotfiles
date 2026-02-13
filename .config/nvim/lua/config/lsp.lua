@@ -7,7 +7,8 @@ vim.pack.add {
 
 local lsp = {
     'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pyright', "tsserver",
-    "c3_lsp", "rust_analyzer", "v_analyzer", "nim_langserver", "jdtls", "kotlin_lsp", "ols"
+    "c3_lsp", "rust_analyzer", "v_analyzer", "nim_langserver", "jdtls",
+    "kotlin_lsp", "ols", "gopls"
 }
 
 vim.lsp.enable(lsp)
