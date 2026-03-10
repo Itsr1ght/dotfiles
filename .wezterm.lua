@@ -10,6 +10,6 @@ config.window_padding = {
     top = 0,
     bottom = 0,
 }
---config.window_decorations = "RESIZE"
+config.font = wezterm.font 'Iosevka'
 
 return config
