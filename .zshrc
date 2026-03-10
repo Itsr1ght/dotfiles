@@ -1,3 +1,5 @@
+autoload -U compinit && compinit
+autoload -U bashcompinit && bashcompinit
 # Personal Zsh configuration file. It is strongly recommended to keep all
 # shell customization and configuration (including exported environment
 # variables such as PATH) in this file or in files sourced from it.
@@ -190,6 +192,4 @@ export PATH="/usr/lib/jvm/default/bin/:$PATH"
 # adding nimble to PATH
 export PATH="/home/r1ght/.nimble/bin:$PATH"
 
-# direnv hook
-eval "$(direnv hook zsh)"
-
+. "$HOME/.zv/bin/env"
