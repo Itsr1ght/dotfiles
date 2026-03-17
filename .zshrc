@@ -133,6 +133,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export LANGUAGE=en_US
 
 # alias for git commands
 alias g="git"
