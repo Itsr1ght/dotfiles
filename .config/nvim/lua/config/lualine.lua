@@ -54,7 +54,15 @@ require("lsp-progress").setup({
 require('lualine').setup({
     sections = {
         lualine_c = {
-            require('lsp-progress').progress
+            {
+                'filename',
+                cond = function ()
+                    return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
+                end,
+            },
+            {
+                require('lsp-progress').progress
+            }
         }
     }
 })

@@ -8,7 +8,7 @@ vim.pack.add {
 local lsp = {
     'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pyright', "tsserver",
     "c3_lsp", "rust_analyzer", "v_analyzer", "nim_langserver", "jdtls",
-    "kotlin_lsp", "ols", "gopls"
+    "kotlin_lsp", "ols", "gopls", "html_lsp",
 }
 
 vim.lsp.enable(lsp)
@@ -49,20 +49,20 @@ require("fidget").setup({
 
 -- lsp bindings
 
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-vim.keymap.set('n', "<leader>h", vim.lsp.buf.hover)
-vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename)
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {desc = "Format the code"})
+vim.keymap.set('n', "<leader>h", vim.lsp.buf.hover, {desc = "Display the detail about the hover code"})
+vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, {desc = "Rename the variable and other across the file"})
 vim.keymap.set("n", "<C-_>", function()
-        require('Comment.api').toggle.linewise.current()
-    end, { noremap = true, silent = true }
+    require('Comment.api').toggle.linewise.current()
+end, { noremap = true, silent = true , desc = "Comment the line"}
 )
-vim.keymap.set('v', '<C-_>', function ()
+vim.keymap.set('v', '<C-_>', function()
     local api = require("Comment.api")
     local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)
 
     vim.api.nvim_feedkeys(esc, 'nx', false)
     api.toggle.linewise(vim.fn.visualmode())
-    end, { noremap = true, silent = true }
+end, { noremap = true, silent = true , desc = "Comment multiple line"}
 )
 
 vim.keymap.set("i", "<CR>", function()

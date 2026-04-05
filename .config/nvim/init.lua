@@ -10,6 +10,7 @@ vim.o.expandtab = true
 vim.o.winborder = 'rounded'
 vim.o.clipboard = 'unnamedplus'
 vim.o.signcolumn = "yes"
+vim.o.ac = true
 
 require('keymap') -- keymaps in seperate lua file
 
