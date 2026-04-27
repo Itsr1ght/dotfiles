@@ -11,6 +11,7 @@ vim.o.winborder = 'rounded'
 vim.o.clipboard = 'unnamedplus'
 vim.o.signcolumn = "yes"
 vim.o.ac = true
+vim.opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
 
 require('keymap') -- keymaps in seperate lua file
 

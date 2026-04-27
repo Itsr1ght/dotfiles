@@ -1,6 +1,4 @@
 vim.pack.add {
-    { src = 'https://github.com/neovim/nvim-lspconfig' },
-    { src = "https://github.com/Saghen/blink.cmp" },
     { src = "https://github.com/j-hui/fidget.nvim" },
     { src = "https://github.com/numToStr/Comment.nvim" },
 }
@@ -8,7 +6,7 @@ vim.pack.add {
 local lsp = {
     'lua_ls', 'zls', 'asm_lsp', 'nim_lsp', 'clangd', 'pyright', "tsserver",
     "c3_lsp", "rust_analyzer", "v_analyzer", "nim_langserver", "jdtls",
-    "kotlin_lsp", "ols", "gopls", "html_lsp",
+    "kotlin_lsp", "ols", "gopls", "html_lsp", "serve_d",
 }
 
 vim.lsp.enable(lsp)
@@ -20,23 +18,18 @@ vim.diagnostic.config({
 })
 
 
--- autocomplete stuff
-
-local blink = require("blink.cmp")
-blink.setup({
-    fuzzy = { implementation = 'prefer_rust' },
-    signature = { enabled = false },
-    completion = {
-        accept = {
-            auto_brackets = { enabled = true },
-        },
-        list = {
-            selection = { preselect = true, auto_insert = true },
-        },
-        documentation = { auto_show = true, auto_show_delay_ms = 500 },
-        ghost_text = { enabled = true, show_with_menu = true },
-    }
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client and client:supports_method('textDocument/completion') then
+      vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+    end
+    if client and client:supports_method("textDocument/inlayHint") then
+      vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+    end
+  end,
 })
+
 
 -- Fidget config
 
@@ -64,14 +57,6 @@ vim.keymap.set('v', '<C-_>', function()
     api.toggle.linewise(vim.fn.visualmode())
 end, { noremap = true, silent = true , desc = "Comment multiple line"}
 )
-
-vim.keymap.set("i", "<CR>", function()
-    if blink.is_visible() then
-        blink.accept()
-    else
-        return "<CR>"
-    end
-end, { expr = true })
 
 -- for ADA file fix
 vim.api.nvim_create_autocmd("FileType", {
