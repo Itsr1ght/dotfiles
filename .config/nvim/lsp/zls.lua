@@ -8,4 +8,16 @@ return {
         inlay_hints_show_parameter_name_hints = true,
         inlay_hints_hide_redundant_param_names = true,
     },
+
+    on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = bufnr,
+          callback = function()
+            vim.lsp.buf.format({
+              bufnr = bufnr,
+              async = false,
+            })
+          end,
+        })
+    end,
 }
