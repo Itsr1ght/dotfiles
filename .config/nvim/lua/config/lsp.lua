@@ -1,4 +1,5 @@
 vim.pack.add {
+    { src = "https://github.com/saghen/blink.cmp"},
     { src = "https://github.com/j-hui/fidget.nvim" },
     { src = "https://github.com/numToStr/Comment.nvim" },
 }
@@ -21,15 +22,38 @@ vim.diagnostic.config({
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client and client:supports_method('textDocument/completion') then
-      vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
-    end
     if client and client:supports_method("textDocument/inlayHint") then
       vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
     end
   end,
 })
 
+
+-- Blink.cmp
+
+require("blink.cmp").setup({
+  keymap = {
+    preset = "default",
+  },
+
+  appearance = {
+    nerd_font_variant = "mono",
+  },
+
+  completion = {
+    trigger = {
+        show_on_keyword = false,
+        show_on_trigger_character = true,
+    },
+    documentation = {
+      auto_show = true,
+    },
+  },
+
+  sources = {
+    default = { "lsp", "path", "buffer" },
+  },
+})
 
 -- Fidget config
 
