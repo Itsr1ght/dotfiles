@@ -61,7 +61,7 @@ z4h init || return
 path=(~/bin $path)
 
 # Export environment variables.
-export GPG_TTY=$TTY
+export GPG_TTY=$(tty)
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
