@@ -10,6 +10,14 @@ local lsp = {
     "kotlin_lsp", "ols", "gopls", "html_lsp", "serve_d",
 }
 
+vim.filetype.add({
+  extension = {
+    c3 = "c3",
+    c3i = "c3",
+    c3t = "c3",
+  },
+})
+
 vim.lsp.enable(lsp)
 
 vim.diagnostic.config({
@@ -46,7 +54,7 @@ require("blink.cmp").setup({
         show_on_trigger_character = true,
     },
     documentation = {
-      auto_show = true,
+      auto_show = false,
     },
   },
 

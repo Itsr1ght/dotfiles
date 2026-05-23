@@ -201,3 +201,7 @@ export NVM_DIR="$HOME/.nvm"
 
 
 alias gamesir='/usr/local/bin/gamesir-fix.sh'
+
+export ALTERNATE_EDITOR=/usr/bin/emacs
+
+export PATH="/home/r1ght/.zero/bin:$PATH"
