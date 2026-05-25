@@ -8,18 +8,18 @@ vim.filetype.add({
 return {
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        c3_lsp = {
-          cmd = { "c3lsp" },
-          filetypes = { "c3", "c3i" },
-
-          root_dir = function(fname)
-            local util = require("lspconfig.util")
-            return util.root_pattern("project.json", "c3lsp.json", ".git")(fname)
-          end,
+    init = function()
+      vim.lsp.config("c3_lsp", {
+        cmd = { "c3lsp" },
+        filetypes = { "c3", "c3i" },
+        root_markers = {
+          "project.json",
+          "c3lsp.json",
+          ".git",
         },
-      },
-    },
+        single_file_support = true,
+      })
+      vim.lsp.enable("c3_lsp")
+    end,
   },
 }
