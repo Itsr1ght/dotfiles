@@ -193,8 +193,6 @@ export PATH="/usr/lib/jvm/default/bin/:$PATH"
 # adding nimble to PATH
 export PATH="/home/r1ght/.nimble/bin:$PATH"
 
-. "$HOME/.zv/bin/env"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -206,3 +204,7 @@ export ALTERNATE_EDITOR=/usr/bin/emacs
 
 export PATH="/home/r1ght/.zero/bin:$PATH"
 alias cleanclip="wl-paste | grep -v '^~ \.\.\.' | wl-copy"
+
+function open(){
+  dolphin "${1:-.}" >/dev/null 2>&1 &
+}
